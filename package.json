@@ -1,0 +1,55 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
+  "dependencies": {
+    "@expo/vector-icons": "^6.3.1",
+    "color": "^3.0.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react-native": "^3.2.1",
+    "expo": "^26.0.0",
+    "native-base": "^2.4.1",
+    "prop-types": "^15.6.1",
+    "react": "16.3.0-alpha.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-26.0.0.tar.gz",
+    "react-native-easy-grid": "^0.1.17",
+    "react-native-extended-stylesheet": "^0.8.1",
+    "react-native-modal-datetime-picker": "^5.1.0",
+    "react-native-parallax-header": "^1.0.6",
+    "react-native-scripts": "^1.13.1",
+    "react-navigation": "^1.5.11"
+  },
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "lint": "eslint app/",
+    "lint:fix": "eslint app/ --fix",
+    "prettier": "prettier --write '*.js'",
+    "format-code": "yarn run prettier && yarn run lint:fix",
+    "precommit": "lint-stagged",
+    "react-devtools": "react-devtools"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn run format-code",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.4",
+    "prettier": "1.11.1",
+    "react-devtools": "^3.2.1"
+  },
+  "rnpm": {
+    "assets": [
+      "app/assets/fonts"
+    ]
+  }
+}

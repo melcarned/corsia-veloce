@@ -1,0 +1,58 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ScrollView } from 'react-native';
+import { Content, List } from 'native-base';
+
+import MenuSimple from '../../data/menu';
+import MenuItem from './MenuItem';
+
+const Menu = ({ clickItem }) => (
+  <Content>
+    <ScrollView>
+      <List
+        dataArray={MenuSimple.response}
+        renderRow={item => <MenuItem clickItem={clickItem} data={item} />}
+      />
+    </ScrollView>
+  </Content>
+);
+
+Menu.propTypes = {
+  clickItem: PropTypes.func,
+};
+
+export default Menu;
+
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Image } from 'react-native';
+import { Card, Content, Text, CardItem, Grid, Left, Row, Col } from 'native-base';
+
+const MenuItem = ({ data, clickItem }) => (
+  <Content>
+    <Card>
+      <CardItem cardBody button onPress={() => clickItem(data)} style={{ backgroundColor: 'transparent' }} >
+        <Grid>
+          <Col size={35}>
+            <Image source={data.image} style={{ width: null, height: 100, flex: 1 }} />
+          </Col>
+          <Col size={65}>
+            <Row>
+              <Text style={{ fontWeight: 'bold' }}>{data.title}</Text>
+            </Row>
+            <Row>
+              <Text note>{data.description}</Text>
+            </Row>
+          </Col>
+        </Grid>
+      </CardItem>
+    </Card>
+  </Content>
+);
+
+MenuItem.propTypes = {
+  data: PropTypes.object,
+  clickItem: PropTypes.func,
+};
+
+export default MenuItem;

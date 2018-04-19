@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import Proptypes from 'prop-types';
+import axios from 'axios';
 
-import { Text, TouchableOpacity, View } from 'react-native';
-import { Content, Form, Item, Input, Picker, Button, Icon } from 'native-base';
+import { Text, TouchableOpacity, View, Image } from 'react-native';
+import { Container, Header, Content, Item, Input, Picker, Button, Icon } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import DateTimePicker from 'react-native-modal-datetime-picker';
+import EStyleSheet from 'react-native-extended-stylesheet';
+
+import ReservationForm from '../components/ReservationForm/ReservationForm';
+import ConfirmReservation from '../components/ReservationButton/ConfirmReservation';
+import HeaderContainer from '../components/HeaderContainer/HeaderContainer';
 
 class MakeReservation extends Component {
   static propTypes = {
@@ -22,71 +28,14 @@ class MakeReservation extends Component {
     drawerIcon: () => <Icon name="md-time" />,
   });
 
-  state = {
-    isDateTimePickerVisible: false,
-  };
-
-  showDateTimePicker = () => this.setState({ isDateTimePickerVisible: true });
-
-  hideDateTimePicker = () => this.setState({ isDateTimePickerVisible: false });
-
-  handleDatePicked = (date) => {
-    console.log('A date has been picked: ', date);
-    this.hideDateTimePicker();
-  };
-
-  handleSelectSeafood = () => {
-    this.props.navigation.navigate('ReservationSummary');
-  };
-
   render() {
     return (
-      <Content padder>
-        <Form>
-          <Item regular>
-            <Input placeholder="Name" />
-          </Item>
-          <Item regular>
-            <Input placeholder="Email" />
-          </Item>
-          <Item regular>
-            <Input placeholder="Phone Number" />
-          </Item>
-          <Grid>
-            <Row>
-              <Col>
-                <Picker mode="dropdown" placeholder="Guests">
-                  <Item label="1" value="key0" />
-                  <Item label="2" value="key1" />
-                  <Item label="3" value="key2" />
-                  <Item label="4" value="key3" />
-                  <Item label="5" value="key4" />
-                  <Item label="6" value="key5" />
-                  <Item label="7" value="key6" />
-                  <Item label="8" value="key7" />
-                  <Item label="9" value="key8" />
-                  <Item label="10" value="key9" />
-                </Picker>
-              </Col>
-              <Col>
-                <View style={{ flex: 1 }}>
-                  <TouchableOpacity onPress={this.showDateTimePicker}>
-                    <Text>Show DatePicker</Text>
-                  </TouchableOpacity>
-                  <DateTimePicker
-                    isVisible={this.state.isDateTimePickerVisible}
-                    onConfirm={this.handleDatePicked}
-                    onCancel={this.hideDateTimePicker}
-                  />
-                </View>
-              </Col>
-            </Row>
-          </Grid>
-          <Button block primary onPress={this.handleSelectSeafood}>
-            <Text style={{ fontWeight: 'bold' }}>Select Seafood</Text>
-          </Button>
-        </Form>
-      </Content>
+      <Container>
+        <HeaderContainer title="Reservations" />
+        <Content padder>
+          <ReservationForm />
+        </Content>
+      </Container>
     );
   }
 }

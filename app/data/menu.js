@@ -1,199 +1,95 @@
-const MenuMain = [
-  {
-    brushetta: [
-      {
-        header: 'Brushetta',
-        title: 'Una sera nella Corsia Veloce',
-        Description:
-          'House Bruschetta topped with assortments of regional vegetables, cheeses, olives, smoked seafood and cured meats',
-      },
-    ],
-  },
-  {
-    seafood: [
-      {
-        title: 'Scaloppine',
-        subtitle: '(Scallops)',
-        Description: '',
-      },
-      {
-        title: 'Vongole al forno',
-        subtitle: '(Baked Clam)',
-        Description: '',
-      },
-      {
-        title: 'Calamari',
-        subtitle: '(Squid)',
-        Description: '',
-      },
-      {
-        title: 'Polpo',
-        subtitle: '(Octopus)',
-        Description: '',
-      },
-      {
-        title: 'Gamberetto',
-        subtitle: '(Shrimp)',
-        Description: '',
-      },
-    ],
-  },
-  {
-    sauce: [
-      {
-        title: 'Pomodoro e basilico',
-        subtitle: '(Tomato Basil)',
-        Description: '',
-      },
-      {
-        title: 'Aglio al limone',
-        subtitle: '(Lemon Garlic)',
-        Description: '',
-      },
-    ],
-  },
-  {
-    frutta: [
-      {
-        title: "Macedonia dell'estate",
-        subtitle: '(Seasonal fruit medley)',
-        Description: '',
-      },
-    ],
-  },
-  {
-    vino: [
-      {
-        title: 'Vino bianco',
-        subtitle: '(House white wine)',
-        Description: '',
-      },
-    ],
-  },
-  {
-    digestivo: [
-      {
-        title: 'Espresso',
-        subtitle: '',
-        Description: '',
-      },
-      {
-        title: 'Limoncello',
-        subtitle: '',
-        Description: '',
-      },
-    ],
-  },
-];
-
 const path = '../assets/';
 
 export default {
   menu: [
     {
-      sectionTitle: 'BRUSHETTA',
+      sectionTitle: 'ANTIPASTO',
+      key: '0',
       items: [
         {
-          title: 'Brushetta',
+          title: '"Sulla Corsia Veloce"',
           subtitle: 'Una sera nella Corsia Veloce',
           description:
-            'cheeses, olives, smoked seafood and cured meats',
+            'brushetta made with cheeses, olives, vegitables, herbs, fruits, smoked seafood, cured meats',
           image: require(`${path}Brushetta_Assortment.jpg`),
         },
       ],
     },
     {
       sectionTitle: 'FRUTTI DI MARE',
+      key: '1',
       items: [
         {
-          title: 'Scaloppine',
+          title: 'Scallops',
           subtitle: '(Scallops)',
-          description: 'cheeses, olives, smoked seafood and cured meats',
+          description: 'garlic, lemon, parsely, olive oil',
           image: require(`${path}Scallops.jpeg`),
         },
         {
-          title: 'Vongole al forno',
+          title: 'Baked Clams',
           subtitle: '(Baked Clam)',
-          description: 'cheeses, olives, smoked seafood and cured meats',
+          description: 'breadcrumbs, parsely, lemon, garlic, olive oil',
           image: require(`${path}Baked_Clams.jpg`),
         },
         {
           title: 'Calamari',
           subtitle: '(Squid)',
-          description: 'cheeses, olives, smoked seafood and cured meats',
+          description: 'breadcrumbs, marinara, basil, olive oil',
           image: require(`${path}Calamari.jpg`),
         },
         {
-          title: 'Polpo',
+          title: 'Octopus',
           subtitle: '(Octopus)',
-          description: 'cheeses, olives, smoked seafood and cured meats',
+          description: 'olive oil, garlic, wine, pepper',
           image: require(`${path}Octopus.jpg`),
         },
         {
-          title: 'Gamberetto',
+          title: 'Shrimp',
           subtitle: '(Shrimp)',
-          description: 'cheeses, olives, smoked seafood and cured meats',
+          description: 'butter, garlic, red pepper, parsely',
           image: require(`${path}Shrimp.jpg`),
         },
       ],
     },
-
     {
-      sectionTitle: 'Sauce',
+      sectionTitle: 'VINO',
+      key: '2',
       items: [
         {
-          title: 'Pomodoro e basilico',
-          subtitle: '(Tomato Basil)',
-          description:
-            'House Bruschetta topped with assortments of regional vegetables, cheeses, olives, smoked seafood and cured meats',
-          image: require(`${path}Tomato_Basil.jpg`),
-        },
-        {
-          title: 'Aglio al limone',
-          subtitle: '(Lemon Garlic)',
-          description:
-            'House Bruschetta topped with assortments of regional vegetables, cheeses, olives, smoked seafood and cured meats',
-          image: require(`${path}Lemon_Garlic.jpg`),
-        },
-      ],
-    },
-
-    {
-      sectionTitle: 'Vino',
-      items: [
-        {
-          title: 'Vino bianco',
+          title: 'White Wine',
           subtitle: '(House white wine)',
           description:
-            'House Bruschetta topped with assortments of regional vegetables, cheeses, olives, smoked seafood and cured meats',
+            'house regional selection',
           image: require(`${path}White_Wine.jpg`),
         },
       ],
     },
     {
-      sectionTitle: 'Frutta',
+      sectionTitle: 'FRUTTA',
+      key: '3',
       items: [
         {
-          title: "Macedonia dell'estate",
+          title: 'Seasonal Fruit',
           subtitle: '(Seasonal fruit medley)',
-          Description: '',
+          description: 'seasonal selection of fresh fruit',
           image: require(`${path}Melone_Salad.jpg`),
         },
       ],
     },
     {
-      sectionTitle: 'Digestivo',
+      sectionTitle: 'DIGESTIVO',
+      key: '4',
       items: [
         {
           title: 'Espresso',
           subtitle: '',
-          Description: '',
+          description: 'house dark roast',
           image: require(`${path}Espresso.jpg`),
         },
         {
           title: 'Limoncello',
           subtitle: '',
-          Description: '',
+          description: 'oraganic regional pick',
           image: require(`${path}Limoncello.jpg`),
         },
       ],

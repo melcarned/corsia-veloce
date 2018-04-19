@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Header, Body, Title } from 'native-base';
+import { Header, Body, Text, Button, Icon, Left, Right } from 'native-base';
+
+import styles from './styles';
 
 const HeaderContainer = ({ title }) => (
-  <Header>
+  <Header style={styles.header} hasTabs>
     <Body>
-      <Title>{title}</Title>
+      <Text style={styles.headerText}>{title}</Text>
     </Body>
   </Header>
 );

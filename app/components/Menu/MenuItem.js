@@ -1,40 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Image, TouchableHighlight } from 'react-native';
-import { ListItem, Body, Thumbnail, Content, Text, CardItem, Grid, Left, Row, Col } from 'native-base';
-import EStyleSheet from 'react-native-extended-stylesheet';
+import { ListItem, Body, Thumbnail, Content, Text, CardItem, Grid, Left, Right, Row, Col } from 'native-base';
 
-const styles = EStyleSheet.create({
-  content: {
-    paddingLeft: 0,
-    marginLeft: 0,
-  },
-  text: {
-    fontFamily: 'ProximaNovaAltBold',
-    fontWeight: 'bold',
-  },
-});
+import styles from './styles';
 
-
-const MenuItem = ({ data, clickItem }) => (
+const MenuItem = ({ data }) => (
   <Content>
-    <ListItem style={styles.content} button onPress={() => clickItem(data)}>
-      <Grid>
-        <Row>
-          <Text style={styles.text}>{data.title}</Text>
-        </Row>
-        <Row>
-          <Text note>{data.description}</Text>
-        </Row>
-      </Grid>
-
+    <ListItem avatar style={styles.menuItem}>
+      <Left>
+        <Thumbnail source={data.image} />
+      </Left>
+      <Body style={styles.menuItemBody}>
+        <Text style={styles.menuItemText}>{data.title}</Text>
+        <Text note style={styles.menuItemNote}>{data.description}</Text>
+      </Body>
     </ListItem>
   </Content>
 );
 
 MenuItem.propTypes = {
   data: PropTypes.object,
-  clickItem: PropTypes.func,
 };
 
 export default MenuItem;

@@ -64,25 +64,25 @@ const options = {
 };
 
 const ReservationForm = () => {
-    const handleClickReservation = () => {
-        const value = this._form.getValue(); // use that ref to get the form value
-        console.log('value: ', value);
+  const handleClickReservation = () => {
+    const value = this._form.getValue(); // use that ref to get the form value
+    console.log('value: ', value);
 
-        if (value !== null) {
-        axios.post('http://localhost:5000/api/newReservation/', value)
-            .then((res) => {
-            const testAPI = res.data;
-            console.log(JSON.stringify(testAPI));
+    if (value !== null) {
+      axios.post('http://localhost:5000/api/newReservation/', value)
+        .then((res) => {
+          const testAPI = res.data;
+          console.log(JSON.stringify(testAPI));
+          this.props.navigation.navigate('Home');
+          if (res.status === 201) {
             this.props.navigation.navigate('Home');
-            if (res.status === 201) {
-                this.props.navigation.navigate('Home');
-            }
-            })
-            .catch((error) => {
-            console.log(error);
-            });
-        }
-    };
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  };
 
   return (
     <Content>

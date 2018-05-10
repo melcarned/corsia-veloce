@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/melcarned/.nvm/versions/node/v7.3.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js run format-code /Users/melcarned/Documents/Projects/React Native/corsia-veloce/app/actions/actions.js
+  /Users/melcarned/.nvm/versions/node/v7.3.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js run format-code /Users/melcarned/Documents/Projects/React Native/corsia-veloce/app/components/ReservationForm/ReservationForm.js /Users/melcarned/Documents/Projects/React Native/corsia-veloce/App.js
 
 PATH: 
   /Users/melcarned/Documents/Projects/React Native/corsia-veloce/node_modules/.bin:/Users/melcarned/Documents/Projects/React Native/node_modules/.bin:/Users/melcarned/Documents/Projects/node_modules/.bin:/Users/melcarned/Documents/node_modules/.bin:/Users/melcarned/node_modules/.bin:/Users/node_modules/.bin:/node_modules/.bin:/Users/melcarned/.nvm/versions/node/v7.3.0/bin:/Users/melcarned/.nvm/versions/node/v7.3.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/melcarned/Documents/Projects/React Native/corsia-veloce/node_modules/.bin:/Users/melcarned/.nvm/versions/node/v7.3.0/bin:/Applications/Xcode.app/Contents/Developer/usr/libexec/git-core:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Applications/Xamarin Workbooks.app/Contents/SharedSupport/path-bin:/Users/melcarned/Library/Android/sdk/tools:/Users/melcarned/Library/Android/sdk/platform-tools:/usr/local/bin:/usr/local
@@ -8241,7 +8241,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c yarn run prettier && yarn run lint:fix '/Users/melcarned/Documents/Projects/React Native/corsia-veloce/app/actions/actions.js'
+  Arguments: -c yarn run prettier && yarn run lint:fix '/Users/melcarned/Documents/Projects/React Native/corsia-veloce/app/components/ReservationForm/ReservationForm.js' '/Users/melcarned/Documents/Projects/React Native/corsia-veloce/App.js'
   Directory: /Users/melcarned/Documents/Projects/React Native/corsia-veloce
   Output:
   
